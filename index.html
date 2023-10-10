@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel = "shortcut icon" href = "logo_512.ico" type = "image/png">>
+  <link rel="stylesheet" href="style.css">
+  <title>Челендж средиземья</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/logo.png" alt="Global">
+    <p>Таверна Средиземье</p>
+  </a>
+  <p class="device-notification--message">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+
+            <p>Таверна Средиземье</p>
+          </a>
+          <button class="header--cta cta">ФИНАЛ</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Вступление</span></li>
+            <li><span>ФИО</span></li>
+            <li><span>НОМЕР</span></li>
+            <li><span>ГОД</span></li>
+            <li><span>Финал</span></li>
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>100% скидки на меню<br>Если...<br>Ты сможешь пройти наши испытания</h1>
+                <button class="cta">В начало!
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <h3>Предисловье</h3>
+                  <p>Ты наткнулся на интересный сайт который бросил тебе вызов <br><br> Все написанное тут — правда</p>
+                </a>
+                <a href="#0">
+                  <h3>По средам и пятницам</h3>
+                  <p>В нашей таверне мы проводим игры и испытания <br> <br>D&D, Mafia и 47 других миров </p>
+                </a>
+                <a href="#0">
+                  <h3>Но сейчас мы в интернете</h3>
+                  <p>Здесь нет ламповой атмосферы и наших официантов <br><br>Здесь борьба за халяву </p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="work">
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-center">
+                    <a href="#0">
+                     <div class="main">
+                      <h1 class="roboto center">Ваше имя, сэр</h1><h3>Вводи настоящее <br>Иначе кому мы будем бесплатно готовить</h3>
+                        <p class="center roboto letter" type="button" id = "letter"></p>
+                        <input type="button" class="roboto_submitBtn" value="<" onclick="GPG_NotFun()">
+                        <input type="button" class="roboto_submitBtn" value="Ok" id="confirm-btn">
+                        <input type="button" value=">" class="roboto_submitBtn" onclick = "GFG_Fun()"  id = "next-btn">
+                        <div>
+                        </div>
+                      </div>
+                        <div class="result">
+                        <p id="full-name" class="roboto textResult" ></p>
+                        <button onclick="verifyName()" class="roboto_submitBtn">Подтвердить</button>
+                        <div>
+                        </div>
+                         <script>
+                           function GPG_NotFun(){
+                            var c = letter.innerHTML;
+                            letter.innerHTML = previousCharacter(c);
+                           
+                            var e = previousCharacter(c);
+                            console.log(e);
+                           }
+                           
+                           var letter = document.getElementById('letter');
+                           letter.innerHTML = 'a';
+                           
+                           function previousCharacter(c){
+                            return String.fromCharCode(c.charCodeAt(0) - 1);
+                           }
+                           
+                           function nextCharacter(c) {
+                            return String.fromCharCode(c.charCodeAt(0) + 1);
+                           }
+                           
+                           function GFG_Fun() {
+                            globalThis.c = letter.innerHTML;
+                            letter.innerHTML = nextCharacter(c);
+                           
+                            var d = nextCharacter(c);
+                            console.log(d);
+                           }
+                           
+                           var confirmedBtn = document.getElementById('confirm-btn');
+                           
+                           var fullName = document.getElementById('full-name');
+                           
+                           //fullName.innerHTML ="testing purposes..."
+                           
+                           confirmedBtn.addEventListener("click", 
+                            function()
+                            { 
+                           
+                              screenOutput = fullName. innerHTML + letter.innerHTML
+                           
+                              fullName.innerHTML = screenOutput;
+                            }
+                            ); 
+                           
+                           function verifyName(){
+                            alert("Are you sure your name is " + screenOutput + "?");
+                           
+                           }
+                           
+                        </script>
+                        <style>
+                          .roboto_submitBtn{
+                            color: black;
+                          }
+                        </style>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GT9SGNE9P7');
+    </script>
+
+
+
+
+       <style>
+        form{
+            margin: 0;
+             position: absolute;               
+             top: 50%;
+             left: 50%;                         
+             transform: translate(-50%, -50%) 
+           }
+
+
+        .zxc{
+          color: black;
+        }
+        }
+
+        }
+        form input#slider{
+            transition: width 0.5s ease-in-out;
+        }
+        form input#angleSlider{
+            display: none;
+        }
+        footer{
+            position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 12px; color: #999;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h3>Это самое сложное <br> номер телефона</h3>
+        <div><span id="phoneDisplay">(30) 339-669-214 </span></div>
+        <input id="slider" type="range" min="10000000000" max="99999999999" value="55555555555" title="Hint: use keyboard arrows to change value" style="transition: width 0.5s ease-in-out;">
+        <div>
+            
+            <input id="angleSlider" type="range" min="-10" max="10" step="0.02" style="display: none;" value="0">
+            <!-- <div id = "angleArea" style="display: none;">Angle: <span id="angleDisplay"></span></div>
+                <div id = "speedArea" style="display: none;">Speed: <span id="speedDisplay"></span></div>
+                <div id = "valueArea" style="display: none;">Value: <span id="valueDisplay"></span></div> -->
+            </div>
+            <input class="zxc" id="submit" type="submit" value="Это мой!">
+        </form>
+    </body>
+    <script>
+        var slider = document.getElementById("slider");
+        var angleSlider = document.getElementById("angleSlider");
+        // var angleDisplay = document.getElementById("angleDisplay");
+        // var speedDisplay = document.getElementById("speedDisplay");
+        // var valueDisplay = document.getElementById("valueDisplay");
+        var phoneDisplay = document.getElementById("phoneDisplay");
+        var advancedModeCheckbox = document.getElementById("advancedMode");
+        var angle = 0;
+        var speed = 0;
+        var friction = 0.99;
+        var value = Number(slider.value);
+        
+        // Phone value is converted to a string
+        function PhoneNumberToDisplay( value ) {
+            // (XX)XXX-XXX-XXXX
+            var display = "("+ value.toString().substr(0, 2) + ") " + value.toString().substr(2, 3) + '-' + value.toString().substr(5, 3)+'-' + value.toString().substr(8, 3);
+            return display;
+        }
+        
+        // Apply Physics rule to update phone value based on angle and speed
+        function UpdatePhone() {
+            // Get angle and speed from sliders
+            angle = Number(angleSlider.value);
+            value = Number(slider.value)
+            // Speed is based on angle
+            speed += Math.sin(angle * Math.PI / 180)*1000;
+            // Friction
+            speed *= friction;
+            value += Math.round(speed*100000);
+            // Update phone value
+            // Bounce off edges, inverting speed
+            if (value > slider.max) {
+                value = slider.max;
+                speed *= -1;
+            } else if (value < slider.min) {
+                value = slider.min;
+                speed *= -1;
+            }
+            slider.value = value;
+            // Update phone display
+            phoneDisplay.innerHTML = PhoneNumberToDisplay(value);
+            // // Update speed display
+            // speedDisplay.innerHTML = Math.round(speed);
+            // // Update value display
+            // valueDisplay.innerHTML = Math.round(value);
+            // // Update angle display
+            // angleDisplay.innerHTML = angle;
+        }
+        
+        // Continuous update
+        setInterval(UpdatePhone, 10);
+        
+        // Advanced Mode
+        advancedModeCheckbox.addEventListener("change", function() {
+            if (this.checked) {
+                // Show advanced controls
+                document.getElementById("angleSlider").style.display = "block";
+                slider.style.width = '100%';
+                // document.getElementById("angleArea").style.display = "block";
+                // document.getElementById("speedArea").style.display = "block";
+                // document.getElementById("valueArea").style.display = "block";
+            } else {
+                // Hide advanced controls
+                document.getElementById("angleSlider").style.display = "none";
+                // document.getElementById("angleArea").style.display = "none";
+                // document.getElementById("speedArea").style.display = "none";
+                // document.getElementById("valueArea").style.display = "none";
+                slider.style.width = '197px';
+                angleSlider.style.display = 'none';
+                // speed = 0;
+                angleSlider.value = 0;
+                slider.style.transform = 'rotate(0deg)';
+            }
+        });
+        
+        slider.oninput = function() {
+            speed = 0;
+        };
+        
+        angleSlider.oninput = function() {
+            angle = Number(angleSlider.value);
+            slider.style.transform = 'rotate(' + angle + 'deg)';
+        };
+        
+        // Advanced Mode  
+        var advancedMode = false
+        /* When checked, set a variable */
+        advancedModeCheckbox.addEventListener('change', function() {
+            advancedMode = advancedModeCheckbox.checked;
+        });
+        
+        // On submit
+        document.getElementById("submit").addEventListener("click", function(event) {
+            if (confirm("Is this your Phone Number?\n" + PhoneNumberToDisplay(value))) {
+                // Thank you
+                alert("Thank you for your submission!");
+            } else {
+                // Please Contact your phone administrator
+                alert("Please contact your phone administrator to change your phone number to " + PhoneNumberToDisplay(value));
+            }
+            // Prevent default form submission
+            event.preventDefault();
+        });
+        
+    </script>
+
+          </li>
+          <li class="l-section section">
+           
+
+          <body2>
+            <h2>Это твой день рожения?</h2>
+
+            <div id='dates'>
+              <div id='log-lower' class='log'></div>
+              <div><button id='lower' class="roboto_submitBtn" onclick='lower()'>Раньше</button></div>
+              <div id='date'>Date</div>
+              <div><button id='higher' class="roboto_submitBtn" onclick='higher()'>Позже</button></div>
+              <div id='log-higher' class='log'></div>
+            </div>
+
+            <div id='count'>1 Guess</div>
+          </body2>
+          <script>
+            let date = new Date()
+            let high = date
+            let low  = new Date(0, 0, 1)
+            let size = 30
+            let n = 1
+
+            setDate()
+
+            function setDate(dir) {
+              document.getElementById('date').innerText = dateString()
+              
+              const count = n + ' Guess' + (n > 1 ? 'es' : '');
+              document.getElementById('count').innerText = count;
+            }
+
+            function dateString() {
+              return date.toString().substring(4, 15);
+            }
+
+            function higher() {
+              low = date;
+              update('higher');
+            }
+
+            function lower() {
+              high = date;
+              update('lower');
+            }
+
+            function update(dir) {
+              logDate(dir);
+              guess();
+              setDate(dir);
+            }
+
+            function guess() {
+              const delta = high.getTime() - low.getTime();
+              const error = delta * ((Math.random() / 2) - 0.25);
+              const guess = low.getTime() + (delta / 2) + error;
+              
+              date = new Date(guess);
+              n++;
+              size--;
+            }
+
+            function logDate(id) {
+              const elem = getDateElement(dateString());
+              
+              if(id == 'lower') {
+                document.getElementById('log-higher').append(elem);
+                
+              } else if(id == 'higher') {
+                document.getElementById('log-lower').prepend(elem);
+              }
+            }
+
+            function getDateElement(date) {
+              let text = document.createTextNode(date);
+              let elem = document.createElement('div');
+              elem.appendChild(text);
+              return elem;
+            }
+          </script>  
+            <style>
+
+            body2 {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+            }
+
+            #dates {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              margin-bottom: 20px;
+            }
+
+            #dates > div {
+              margin: 0 10px;
+              color: rebeccapurple;
+}
+            }
+
+            #date {
+              font-size: 25px;
+              color: gray;
+            }
+
+            .log {
+              font-family: 'Courier New';
+              color: black;
+            }
+
+            </style>
+
+
+
+            
+          </li>
+          <li class="l-section section">
+            <div class="hire">
+              <!-- checkout formspree.io for easy form setup -->
+              <form class="work-request">
+                <h1>
+                  Ой, мы оказались в конце
+                </h1>
+                <h2>
+                  Расскажи, что из этого ты любишь, а я тебе секретик
+                </h2>
+                <div class="work-request--options">
+                  <span class="options-a">
+                    <input id="opt-1" type="checkbox" value="app design">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Настолки
+                    </label>
+                    <input id="opt-2" type="checkbox" value="graphic design">
+                    <label for="opt-2">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Фэнтези
+                    </label>
+                    <input id="opt-3" type="checkbox" value="motion design">
+                    <label for="opt-3">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Вкусная еда
+                    </label>
+                  </span>
+                  <span class="options-b">
+                    <input id="opt-4" type="checkbox" value="ux design">
+                    <label for="opt-4">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Живая музыка
+                    </label>
+                    <input id="opt-5" type="checkbox" value="webdesign">
+                    <label for="opt-5">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Центр Казани
+                    </label>
+                    <input id="opt-6" type="checkbox" value="marketing">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      RP персонал
+                    </label>
+                  </span>
+                </div>
+                <div class="work-request--information">
+                </div>
+                <input type="submit" value="Мне это нравится">
+                <button class="button2" onClick="window.open('https://vk.com/club222901690?w=wall-222901690_1%2Fall');">
+                       <span class="icon">Хочу знать секретик</span>
+                  </button>
+              </form>
+              <form>
+                  
+
+                  <style>
+                  .button2 {
+                     
+                    color:#0f33ff;
+                    margin-top: 20px;
+                    width: 400px;
+                    max-width: 100%;
+                    line-height: 50px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    background-color: white;
+                    border: none;
+                    border-radius: 0;
+                  }
+                  </style>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Вступление</li>
+    <li>ФИО</li>
+    <li>НОМЕР</li>
+    <li>ГОД</li>
+    <li>Финал</li>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+</body>
+</html>
